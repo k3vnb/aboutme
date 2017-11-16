@@ -14,7 +14,7 @@ img {
     max-width: 100%;
 }
 
-.nav-bar {overflow: auto;padding: 25px;position: fixed;background: #645dd6;top: 0;left: 0;right: 0;z-index: 999;}
+.nav-bar {overflow: auto;padding: 25px;position: fixed;background: hsla(0, 0%, 100%, 0.84);top: 0;left: 0;right: 0;z-index: 999;}
 
 .nav-bar ul {
     float: right;
@@ -42,7 +42,7 @@ a {
     overflow: auto;
     min-height: 100vh;
     background: #ffffffd1;
-    padding: 0 25px;
+    padding: 20px 25px 0;
     margin-top: 87px;
 }
 
@@ -50,6 +50,7 @@ a {
     max-height: 400px;
     width: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .half {
@@ -84,7 +85,7 @@ a {
     object-fit: cover;
 }
 
-.fa {font-size: 35px;margin: 10px 10px 34px;color: white;}
+.fa {font-size: 35px;margin: 10px 10px 34px;color: #4243af;}
 
 i {
     cursor: pointer;
@@ -99,16 +100,22 @@ a.btn {
 }
 
 .header:after {
-    content: "You dont knooooow me!";
+    content: "";
     position: absolute;
-    top: 41%;
-    right: 95px;
+    top: 0;
+    right: 0;
     color: #d8d8d8;
     font-size: 55px;
     font-weight: bold;
     background: #000000a8;
     padding: 20px;
-    border-radius: 50px;
+    bottom: 0;
+    left: 0;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+1,000000+100&0+1,0+53,1+100,1+101;Blue+to+Transparent */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 1%, rgba(0,0,0,0) 53%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 101%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 53%,rgba(0,0,0,1) 100%,rgba(0,0,0,1) 101%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 53%,rgba(0,0,0,1) 100%,rgba(0,0,0,1) 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .header {
@@ -147,4 +154,8 @@ a.btn {
 .grid-img:hover {
     box-shadow: 0 0 0 2px #fff;
     /* border: 1px solid; */
+}
+
+.nav-bar a {
+    color: #000;
 }
