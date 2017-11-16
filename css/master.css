@@ -1,67 +1,150 @@
 body {
     margin: 0;
-    background: #a7a09a;
-}
-
-.wrap {
-    width: 750px;
-    margin: 0 auto;
-    background: #99c;
-}
-
-
-.header {
-    background: #ddd;
-    padding: 5px 10px;
-}
-
-.nav {
-    background: #c99;
-    padding: 5px 10px;
-}
-
-.main {
-    background: #9c9;
-    float: left;
-    width: 500px;
-    padding: 10px;
-}
-
-.sidebar {
-    background: #99c;
-    float: left;
-    width: 250px;
-    padding: 10px;
-}
-
-.footer {
-    background: #cc9;
-    clear: both;
-    padding: 5px 10px;
-}
-
-.nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav li {
-    display: inline;
-}
-
-h1 {
-    margin: 0;
+    font-family: sans-serif;
+    background: url(../img/dungeon-2.png) no-repeat bottom fixed #392f88;
+    background-size: 110%;
+    background-position-x: -244px;
 }
 
 div {
     box-sizing: border-box;
 }
 
-.footer p {
+img {
+    max-width: 100%;
+}
+
+.nav-bar {overflow: auto;padding: 25px;position: fixed;background: #645dd6;top: 0;left: 0;right: 0;z-index: 999;}
+
+.nav-bar ul {
+    float: right;
+    list-style: none;
     margin: 0;
 }
 
-.sidebar ul {
-    margin-bottom: 10px;
+.nav-bar h1 {
+    float: left;
+    margin: 0;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: auto;
+    min-height: 100vh;
+    background: #ffffffd1;
+    padding: 0 25px;
+    margin-top: 87px;
+}
+
+.header img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.half {
+    float: left;
+    width: 50%;
+}
+
+.half:nth-of-type(2n+2) {
+    padding-right: 35px;
+}
+
+.left .inner {
+}
+
+.grid-img {
+    float: left;
+    width: 25%;
+    padding: 2.5px;
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.grid-img:nth-of-type(4n+1) {
+    clear: both;
+}
+
+.grid-img img {
+    display: block;
+    height: 145px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.fa {font-size: 35px;margin: 10px 10px 34px;color: white;}
+
+i {
+    cursor: pointer;
+}
+
+a.btn {
+    background: red;
+    color: #fff;
+    padding: 10px 26px;
+    border-radius: 6px;
+    margin-top: 25px;
+}
+
+.header:after {
+    content: "You dont knooooow me!";
+    position: absolute;
+    top: 41%;
+    right: 95px;
+    color: #d8d8d8;
+    font-size: 55px;
+    font-weight: bold;
+    background: #000000a8;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.header {
+    position: relative;
+}
+
+.nav-bar a {
+    color: #000;
+}
+
+.grid-img.vid:before {
+    content: '\f01d';
+    font-family: fontAwesome;
+    position: absolute;
+    font-size: 75px;
+    color: #ff000069;
+    left: 27%;
+    transition: all .5s ease;
+    top: 25%;
+    z-index: 2;
+}
+
+.grid-img.vid:hover:before {
+    color: #ff1414;
+}
+
+.grid-img img {
+    filter: saturate(.2);
+    transition: all .2s ease;
+}
+
+.grid-img:hover img {
+    filter: saturate(1);
+}
+
+.grid-img:hover {
+    box-shadow: 0 0 0 2px #fff;
+    /* border: 1px solid; */
 }
